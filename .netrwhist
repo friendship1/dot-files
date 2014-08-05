@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/bzhou/SB/rails_proj/first_app/.git'
+let g:netrw_dirhist_2='/Users/bzhou/Sandbox/Instabot'
+let g:netrw_dirhist_3='/Users/bzhou/.vimrc'
+let g:netrw_dirhist_4='/Users/bzhou'
+let g:netrw_dirhist_5='/Users/bzhou/.vimrc'
+let g:netrw_dirhist_6='/Users/bzhou/.vim/colors'
+let g:netrw_dirhist_7='/Users/bzhou/.vim'
+let g:netrw_dirhist_8='/Users/bzhou/SF/tweetriver/app/assets/javascripts/p3/rtm/templates'
