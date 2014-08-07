@@ -12,6 +12,9 @@ filetype plugin indent on
 vnoremap < <gv
 vnoremap > >gv
 
+:vsplit
+set lines=50 columns=90
+
 set autoindent
 set softtabstop=2
 set shiftwidth=2
