@@ -34,8 +34,10 @@ let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse=1
 nnoremap <leader>f :CommandTFlush<CR>
 
-set columns=160
+set columns=999
+set lines=999
 :vsplit
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+
 
