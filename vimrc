@@ -37,3 +37,4 @@ map <C-H> <C-W>h
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+set fu
