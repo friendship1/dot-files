@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/brady/code/cs439/p1/main.dSYM'
-let g:netrw_dirhist_2='/Library/Ruby/Gems/2.0.0/gems/devise-3.3.0'
-let g:netrw_dirhist_3='/Library/Ruby/Gems/2.0.0/gems/devise-3.3.0/lib'
-let g:netrw_dirhist_4='/Library/Ruby/Gems/2.0.0/gems/devise-3.3.0'
-let g:netrw_dirhist_5='/Library/Ruby/Gems/2.0.0/gems/devise-3.3.0/lib'
-let g:netrw_dirhist_6='/Library/Ruby/Gems/2.0.0/gems/devise-3.3.0'
-let g:netrw_dirhist_7='/Users/brady/code/sandbox/Instabot'
-let g:netrw_dirhist_8='/Users/brady/code/cs439/hw2'
-let g:netrw_dirhist_9='/Users/brady/code/cs439/p0'
+let g:netrw_dirhist_cnt =0

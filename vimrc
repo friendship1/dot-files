@@ -17,7 +17,7 @@ set expandtab
 set smarttab
 set transparency=15
 
-set number
+set relativenumber
 set cursorline
 set showmatch
 set ruler
@@ -30,9 +30,11 @@ set guioptions=egmrt
 
 set columns=999
 set lines=999
-:vsplit
+map <C-V> :vsplit
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+map <C-J> 5j
+map <C-K> 5k
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
