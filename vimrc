@@ -15,7 +15,6 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set smarttab
-set transparency=15
 
 set relativenumber
 set cursorline
@@ -28,8 +27,6 @@ set background=dark
 colorscheme molokai
 set guioptions=egmrt
 
-set columns=999
-set lines=999
 map <C-V> :vsplit
 map <C-L> <C-W>l
 map <C-H> <C-W>h
