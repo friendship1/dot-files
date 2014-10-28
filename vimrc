@@ -40,5 +40,4 @@ map <Leader>t :NERDTreeToggle<cr>
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
-set fu
+let g:nerdtree_tabs_open_on_gui_startup=0
