@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/brady/code/cs439/p0'
 let g:netrw_dirhist_2='/Users/brady/code/mean-demo/server'
 let g:netrw_dirhist_3='/Users/brady'
 let g:netrw_dirhist_4='/Users/brady/code'
+let g:netrw_dirhist_5='/Users/brady/code/pintos'
+let g:netrw_dirhist_6='/Users/brady/vim/src'

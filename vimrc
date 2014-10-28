@@ -16,6 +16,7 @@ set tabstop=2
 set expandtab
 set smarttab
 
+set number
 set relativenumber
 set cursorline
 set showmatch
