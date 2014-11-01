@@ -35,11 +35,13 @@ map <C-J> 5j
 map <C-K> 5k
 
 map <Leader>b :MBEToggle<cr>
-map <Leader>1 :MBEbp<cr>
-map <Leader>2 :MBEbn<cr>
+nnoremap - :bp<cr>
+nnoremap = :bn<cr>
 map <Leader>t :NERDTreeToggle<cr>
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:nerdtree_tabs_open_on_gui_startup=0
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
