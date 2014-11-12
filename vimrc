@@ -35,8 +35,8 @@ map <C-J> 5j
 map <C-K> 5k
 
 map <Leader>b :MBEToggle<cr>
-nnoremap - :bp<cr>
-nnoremap = :bn<cr>
+nnoremap 9 :bp<cr>
+nnoremap 0 :bn<cr>
 map <Leader>t :NERDTreeToggle<cr>
 
 let g:ctrlp_map = '<c-p>'
