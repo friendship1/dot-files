@@ -42,6 +42,10 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP' 
 let g:nerdtree_tabs_open_on_gui_startup=0 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:airline#extensions#whitespace#show_message = 0
+let g:airline#extensions#whitespace#symbol = ''
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
 
 set laststatus=2 
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -49,5 +53,3 @@ set encoding=utf-8
 set termencoding=utf-8
 
 call pathogen#infect()
-
-
