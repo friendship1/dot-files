@@ -24,6 +24,8 @@ set nofoldenable
 
 set scrolloff=5
 
+set completeopt-=preview
+
 set background=dark
 colorscheme molokai
 
@@ -38,14 +40,22 @@ nnoremap 9 :bp<cr>
 nnoremap 0 :bn<cr>
 map <Leader>t :NERDTreeToggle<cr>
 
+nnoremap <Leader>1 <C-W>k
+nnoremap <Leader>2 <C-W>j
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP' 
+
 let g:nerdtree_tabs_open_on_gui_startup=0 
+
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#whitespace#symbol = ''
 let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
+
+let g:pymode_options_colorcolumn = 0
 
 set laststatus=2 
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -53,3 +63,4 @@ set encoding=utf-8
 set termencoding=utf-8
 
 call pathogen#infect()
+call pathogen#helptags()
