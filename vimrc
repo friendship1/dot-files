@@ -9,9 +9,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 set autoindent
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set smarttab
 
@@ -27,7 +27,7 @@ set scrolloff=5
 set completeopt-=preview
 
 set background=dark
-colorscheme molokai
+colorscheme atom-dark-256 
 
 map <C-V> :vsplit
 map <C-L> <C-W>l
@@ -42,6 +42,10 @@ map <Leader>t :NERDTreeToggle<cr>
 
 nnoremap <Leader>1 <C-W>k
 nnoremap <Leader>2 <C-W>j
+vnoremap H ^
+vnoremap L $
+nnoremap H ^
+nnoremap L $
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP' 
@@ -56,11 +60,19 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
 
 let g:pymode_options_colorcolumn = 0
+let g:pymode_rope_lookup_project = 0
 
 set laststatus=2 
 set guifont=Inconsolata\ for\ Powerline:h15
 set encoding=utf-8
 set termencoding=utf-8
+
+au FileType markdown setl sw=2 sts=2 ts=2 et
+au FileType javascript setl sw=2 ts=2 sts=2 et
+au FileType scss setl sw=2 sts=2 ts=2 et
+au FileType html setl sw=2 sts=2 ts=2 et
+
+let g:javascript_enable_domhtmlcss = 1
 
 call pathogen#infect()
 call pathogen#helptags()
