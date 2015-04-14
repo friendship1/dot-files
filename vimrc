@@ -74,5 +74,8 @@ au FileType html setl sw=2 sts=2 ts=2 et
 
 let g:javascript_enable_domhtmlcss = 1
 
+# latex live preview
+let g:livepreview_previewer = 'open -a Preview'
+
 call pathogen#infect()
 call pathogen#helptags()
