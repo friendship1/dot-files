@@ -45,6 +45,8 @@ let g:airline_theme='dark'
 let g:pymode_options_colorcolumn = 0
 let g:pymode_rope = 0
 
+let g:syntastic_javascript_checkers = ['jshint']
+
 nnoremap <C-V> :vsplit
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h

@@ -7,3 +7,6 @@
 [submodule "bundle/vim-latex-live-preview"]
 	path = bundle/vim-latex-live-preview
 	url = https://github.com/xuhdev/vim-latex-live-preview.git
+[submodule "bundle/jshint.vim"]
+	path = bundle/jshint.vim
+	url = https://github.com/wookiehangover/jshint.vim.git
