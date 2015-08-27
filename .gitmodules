@@ -1,6 +1,6 @@
 [submodule "bundle/MatchTag"]
-	path = bundle/MatchTag
-	url = https://github.com/gregsexton/MatchTag.git
+    path = bundle/MatchTag
+    url = https://github.com/gregsexton/MatchTag.git
 [submodule "bundle/vim-airline"]
     path = bundle/vim-airline
     url = https://github.com/bling/vim-airline.git
@@ -16,9 +16,6 @@
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/python-mode"]
-    path = bundle/python-mode
-    url = https://github.com/klen/python-mode.git 
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
@@ -28,15 +25,18 @@
 [submodule "bundle/vim-fugitive"]
     path = bundle/vim-fugitive
     url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-javascript"]
-    path = bundle/vim-javascript
-    url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-jsx"]
-    path = bundle/vim-jsx
-    url = https://github.com/mxw/vim-jsx.git
 [submodule "bundle/vim-multiple-cursors"]
     path = bundle/vim-multiple-cursors
     url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/vim-startify"]
     path = bundle/vim-startify
     url = https://github.com/mhinz/vim-startify.git
+[submodule "bundle/vim-signature"]
+    path = bundle/vim-signature
+    url = https://github.com/kshenoy/vim-signature.git
+[submodule "bundle/python-syntax"]
+	path = bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/klen/python-mode.git
