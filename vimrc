@@ -48,6 +48,10 @@ let g:syntastic_python_checkers = ['flake8']
 let g:pymode_options_colorcolumn = 0
 let g:pymode_rope_lookup_project = 0
 
+let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
+
+let g:livepreview_previewer = 'open -a Preview'
+
 vnoremap < <gv
 vnoremap > >gv
 
