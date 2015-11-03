@@ -55,16 +55,23 @@ let g:livepreview_previewer = 'open -a Preview'
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap j gj
+nnoremap k gk
+
 nnoremap <C-V> :vsplit
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap 9 :bp!<cr>
 nnoremap 0 :bn!<cr>
 nnoremap <Leader>b :MBEToggle<cr>
+imap jj <ESC>
+nnoremap <leader>s :mksession<CR>
 
 map <Leader>t :NERDTreeToggle<cr>
 map <C-J> 5j
 map <C-K> 5k
+
+vnoremap . :norm.<CR>
 
 au FileType markdown setl sw=2 sts=2 ts=2 et
 au FileType javascript setl sw=2 ts=2 sts=2 et
