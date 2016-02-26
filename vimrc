@@ -22,6 +22,7 @@ set backspace=indent,eol,start
 set background=dark
 set hidden
 set t_Co=256
+set nowrap
 
 syntax on
 filetype plugin indent on
@@ -41,6 +42,8 @@ let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#whitespace#symbol = ''
 let g:airline_powerline_fonts = 1
 let g:airline_theme='lucius'
+
+let g:airline#extensions#tabline#enabled = 1 
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_python_checkers = ['flake8']
