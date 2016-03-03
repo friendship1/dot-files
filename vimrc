@@ -55,6 +55,9 @@ let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"  
 
 let g:livepreview_previewer = 'open -a Preview'
 
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
 vnoremap < <gv
 vnoremap > >gv
 
@@ -66,7 +69,6 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap 9 :bp!<cr>
 nnoremap 0 :bn!<cr>
-nnoremap <Leader>b :MBEToggle<cr>
 imap jj <ESC>
 nnoremap <leader>s :mksession<CR>
 
