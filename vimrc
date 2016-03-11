@@ -55,7 +55,6 @@ let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"  
 
 let g:livepreview_previewer = 'open -a Preview'
 
-let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 vnoremap < <gv
