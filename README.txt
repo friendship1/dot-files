@@ -1,11 +1,11 @@
-To install (make sure you backup your own ~/.vim and ~/.vimrc!):
-cd ~
-mkdir ~/.vim
-git clone https://github.com/bradyz/dot-files.git ~/.vim
-cd ~/.vim
-git submodule init
-git submodule update
-cp ~/.vim/vimrc ~/.vimrc
+To install 
+copy the install.sh file and then run it in the terminal with
+
+```
+sh install.sh
+```
+
+your old vim will be backed up!
 
 Brief description - 
 ~/.vim is a folder that your vim reads to get all the extra plugin information and where the color configs live.
