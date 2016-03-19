@@ -23,6 +23,7 @@ set background=dark
 set hidden
 set t_Co=256
 set nowrap
+set ic
 
 syntax on
 filetype plugin indent on
@@ -50,6 +51,8 @@ let g:syntastic_python_checkers = ['flake8']
 
 let g:pymode_options_colorcolumn = 0
 let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
 
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
