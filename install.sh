@@ -1,14 +1,31 @@
 clear
+
 echo "Installing your brand new vim"
 
 if [ -f ~/.vimrc ]; then
-    echo "Your old vimrc has been moved to ~/.vimrc_your_backup"
-    mv ~/.vimrc ~/.vimrc_your_backup
+    COUNT=1
+    VIMRC_BACKUP_NAME="$HOME/.vimrc_backup$COUNT"
+
+    while [ -f "$VIMRC_BACKUP_NAME" ]; do 
+        let COUNT=COUNT+1
+        VIMRC_BACKUP_NAME="$HOME/.vimrc_backup$COUNT"
+    done
+
+    mv ~/.vimrc $VIMRC_BACKUP_NAME
+    echo "Your old vimrc has been moved to $VIMRC_BACKUP_NAME"
 fi
 
 if [ -d ~/.vim ]; then
-    echo "Your old vim directory has been moved to ~/.vim_your_backup/"
-    mv ~/.vim/ ~/.vim_your_backup/
+    COUNT=1
+    VIM_DIR_BACKUP_NAME="$HOME/.vim_backup$COUNT"
+
+    while [ -f "$VIM_DIR_BACKUP_NAME" ]; do 
+        let COUNT=COUNT+1
+        VIMRC_BACKUP_NAME="$HOME/.vim_backup$COUNT"
+    done
+
+    mv ~/.vim $VIM_DIR_BACKUP_NAME
+    echo "Your old vimrc has been moved to $VIM_DIR_BACKUP_NAME"
 fi
 
 git clone https://github.com/bradyz/dot-files.git ~/.vim/
