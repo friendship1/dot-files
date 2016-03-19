@@ -9,6 +9,8 @@ set backspace=eol,start,indent
 
 map <C-J> 5j
 map <C-K> 5k
+
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
+
 inoremap jj <ESC>
