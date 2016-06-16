@@ -54,6 +54,10 @@ let g:pymode_rope_lookup_project = 0
 
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_syntax_keyword = 'always'
+let g:easytags_auto_highlight = 0
+
 vnoremap < <gv
 vnoremap > >gv
 vnoremap . :norm.<CR>

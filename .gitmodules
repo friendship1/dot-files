@@ -49,9 +49,6 @@
 [submodule "bundle/vim-glsl"]
 	path = bundle/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl.git
-[submodule "bundle/vim-easytags"]
-	path = bundle/vim-easytags
-	url = https://github.com/xolox/vim-easytags.git
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
