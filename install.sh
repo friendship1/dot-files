@@ -3,32 +3,36 @@ clear
 fun () {
   BACKUP=$1
   TYPE=$2
-  if [ -$TYPE "$HOME/$BACKUP" ]; then
+  if [ -$TYPE "$BACKUP" ]; then
       COUNT=1
-      BACKUP_NAME="$HOME/$BACKUP$COUNT.bak"
+      BACKUP_NAME="$BACKUP$COUNT.bak"
 
-      while [ -f "$BACKUP_NAME" ]; do 
+      while [ -$TYPE "$BACKUP_NAME" ]; do 
           let COUNT=COUNT+1
-          BACKUP_NAME="$BACKUP_backup$COUNT"
+          BACKUP_NAME="$BACKUP$COUNT.bak"
       done
 
-      mv $HOME/$BACKUP $BACKUP_NAME
-      echo "$HOME/$BACKUP has been backed up to $BACKUP_NAME"
+      mv $BACKUP $BACKUP_NAME
+      echo "$BACKUP has been backed up to $BACKUP_NAME"
   fi
 }
 
-echo "Installing your brand new vim"
+echo "Installing your brand new vim!"
+echo "Backing up old files..."
 
-fun ".vimrc"
-fun ".vim"
+fun "$HOME/.vimrc" "f"
+fun "$HOME/.vim" "d"
 
-git clone https://github.com/bradyz/dot-files.git ~/.vim/
+echo "Cloning the required files."
+
+git clone https://github.com/bradyz/dot-files.git ~/.vim/ > /dev/null 2>&1
 cd ~/.vim/
 
-echo "Installing plugins"
-git submodule init
-git submodule update
+echo "Installing plugins...(Be patient!)"
+
+git submodule init > /dev/null 2>&1
+git submodule update > /dev/null 2>&1
 
 cp ~/.vim/vimrc ~/.vimrc
 
-echo "Done"
+echo "Done."
