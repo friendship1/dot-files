@@ -19,7 +19,6 @@ set backspace=indent,eol,start
 set background=dark
 set hidden
 set t_Co=256
-set nowrap
 set sw=4 ts=4 sts=4
 set sw=2 ts=2 sts=2
 set ic
@@ -80,6 +79,16 @@ au FileType css setl sw=2 sts=2 ts=2 et
 au FileType html setl sw=2 sts=2 ts=2 et
 au FileType markdown setl sw=2 sts=2 ts=2 et
 au FileType javascript setl sw=2 ts=2 sts=2 et
+
+" persist undo 
+let undodir = '$HOME/.vim/undodir'
+call system('mkdir -p ' . undodir)
+set undofile
+
+" persist last cursor position
+call system('mkdir -p ' . '$HOME/.vim/view')
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 
 call pathogen#infect()
 call pathogen#helptags()
