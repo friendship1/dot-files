@@ -19,9 +19,8 @@ set backspace=indent,eol,start
 set background=dark
 set hidden
 set t_Co=256
-set sw=4 ts=4 sts=4
-set sw=2 ts=2 sts=2
-set ic
+set shiftwidth=4 tabstop=4 softtabstop=4
+set ignorecase
 set wildignore+=*.so,*.swp,*.zip,*.o
 
 syntax on
@@ -59,26 +58,27 @@ let g:easytags_auto_highlight = 0
 
 vnoremap < <gv
 vnoremap > >gv
-vnoremap . :norm.<CR>
+vnoremap . :normal . <CR>
 
 nnoremap j gj
 nnoremap k gk
-nnoremap 9 :bp!<cr>
-nnoremap 0 :bn!<cr>
+nnoremap <silent> 9 :bp! <CR>
+nnoremap <silent> 0 :bn! <CR>
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
-nnoremap <leader>s :mksession<CR>
+nnoremap <silent> <leader>s :mksession <CR>
+nnoremap <silent> <leader>r :source ~/.vimrc <CR>
 
+" who put this here
 imap jj <ESC>
 
 map <C-J> 5j
 map <C-K> 5k
-map <Leader>t :NERDTreeToggle<cr>
+map <Leader>t :NERDTreeToggle <CR>
 
-au FileType css setl sw=2 sts=2 ts=2 et
-au FileType html setl sw=2 sts=2 ts=2 et
-au FileType markdown setl sw=2 sts=2 ts=2 et
-au FileType javascript setl sw=2 ts=2 sts=2 et
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " persist undo 
 let undodir = '$HOME/.vim/undodir'
@@ -87,8 +87,8 @@ set undofile
 
 " persist last cursor position
 call system('mkdir -p ' . '$HOME/.vim/view')
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent loadview
 
 call pathogen#infect()
 call pathogen#helptags()
