@@ -33,6 +33,6 @@ echo "Installing plugins...(Be patient!)"
 git submodule init > /dev/null 2>&1
 git submodule update > /dev/null 2>&1
 
-cp ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
 
 echo "Done."
