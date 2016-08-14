@@ -68,6 +68,8 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap <silent> <leader>s :mksession <CR>
 nnoremap <silent> <leader>r :source ~/.vimrc <CR>
+nnoremap <leader>p :set paste <CR>
+nnoremap <leader>np :set nopaste <CR>
 
 " who put this here
 imap jj <ESC>
