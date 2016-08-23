@@ -47,9 +47,6 @@ let g:syntastic_python_checkers=['']
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
-let g:pymode_options_colorcolumn = 0
-let g:pymode_rope_lookup_project = 0
-
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
 let g:easytags_file = '~/.vim/tags'
@@ -62,14 +59,24 @@ vnoremap . :normal . <CR>
 
 nnoremap j gj
 nnoremap k gk
+
+" Moving buffers.
 nnoremap <silent> 9 :bp! <CR>
 nnoremap <silent> 0 :bn! <CR>
+
+" Moving screens
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap <silent> <leader>s :mksession <CR>
 nnoremap <silent> <leader>r :source ~/.vimrc <CR>
+
+" Hotkeys for paste mode.
 nnoremap <leader>p :set paste <CR>
 nnoremap <leader>np :set nopaste <CR>
+
+" Hotkeys for changing tabs.
+nnoremap <leader>s2 :setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab <CR>
+nnoremap <leader>s4 :setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab <CR>
 
 " who put this here
 imap jj <ESC>
@@ -83,8 +90,8 @@ autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " persist undo 
-let undodir = '$HOME/.vim/undodir'
-call system('mkdir -p ' . undodir)
+call system('mkdir -p ' . '$HOME/.vim/undodir')
+set undodir=~/.vim/undodir
 set undofile
 
 " persist last cursor position
