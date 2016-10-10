@@ -22,6 +22,7 @@ set t_Co=256
 set shiftwidth=4 tabstop=4 softtabstop=4
 set ignorecase
 set wildignore+=*.so,*.swp,*.zip,*.o
+set hlsearch
 
 syntax on
 filetype plugin indent on
@@ -52,6 +53,10 @@ let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"  
 let g:easytags_file = '~/.vim/tags'
 let g:easytags_syntax_keyword = 'always'
 let g:easytags_auto_highlight = 0
+
+" Python mode column color
+let g:pymode_options_colorcolumn = 0
+let g:pymode_rope=0
 
 vnoremap < <gv
 vnoremap > >gv
@@ -98,6 +103,10 @@ set undofile
 call system('mkdir -p ' . '$HOME/.vim/view')
 autocmd BufWinLeave ?* mkview
 autocmd BufWinEnter ?* silent loadview
+
+" show trailing whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+match ExtraWhitespace /\s\+$/
 
 call pathogen#infect()
 call pathogen#helptags()

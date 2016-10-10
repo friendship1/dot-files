@@ -40,12 +40,6 @@
 [submodule "bundle/vim-autocomplpop"]
 	path = bundle/vim-autocomplpop
 	url = https://github.com/othree/vim-autocomplpop.git
-[submodule "bundle/vim-scala"]
-	path = bundle/vim-scala
-	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "bundle/vim-glsl"]
-	path = bundle/vim-glsl
-	url = https://github.com/tikhomirov/vim-glsl.git
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
