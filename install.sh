@@ -33,6 +33,4 @@ echo "Installing plugins...(Be patient!)"
 git submodule init > /dev/null 2>&1
 git submodule update > /dev/null 2>&1
 
-ln -s $HOME/.vim/vimrc $HOME/.vimrc
-
 echo "Done."
