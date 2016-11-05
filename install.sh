@@ -7,7 +7,7 @@ fun () {
       COUNT=1
       BACKUP_NAME="$BACKUP$COUNT.bak"
 
-      while [ -$TYPE "$BACKUP_NAME" ]; do 
+      while [ -$TYPE "$BACKUP_NAME" ]; do
           let COUNT=COUNT+1
           BACKUP_NAME="$BACKUP$COUNT.bak"
       done
