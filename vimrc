@@ -50,8 +50,13 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Syntax checker.
 let g:syntastic_python_checkers=['']
+let g:syntastic_cpp_checkers=['']
 let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+" Ale Syntax Checker
+let &runtimepath.=',~/.vim/bundle/ale'
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 1
 
 " Start menu.
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
@@ -60,10 +65,6 @@ let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"  
 let g:easytags_file = '~/.vim/tags'
 let g:easytags_syntax_keyword = 'always'
 let g:easytags_auto_highlight = 0
-
-" Python mode column color
-let g:pymode_options_colorcolumn = 0
-let g:pymode_rope=0
 
 " Indent blocks.
 vnoremap < <gv
