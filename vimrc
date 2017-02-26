@@ -8,7 +8,6 @@ set encoding=utf-8
 set expandtab
 set guifont=Inconsolata\ for\ Powerline:h15
 set hidden
-set hlsearch
 set ignorecase
 set laststatus=2
 set nobackup
@@ -85,8 +84,7 @@ nnoremap <silent> <leader>s :mksession <CR>
 nnoremap <silent> <leader>r :source ~/.vimrc <CR>
 
 " Hotkeys for paste mode.
-nnoremap <leader>p :set paste <CR>
-nnoremap <leader>np :set nopaste <CR>
+nnoremap <silent> <leader>p :set paste <CR>:put *<CR>:set nopaste <CR>
 
 " Hotkeys for changing tabs.
 nnoremap <leader>s2 :setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab <CR>
@@ -103,6 +101,8 @@ map <C-K> 5k
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 " Persist undo.
 call system('mkdir -p ' . '$HOME/.vim/undodir')
@@ -117,6 +117,12 @@ autocmd BufWinEnter ?* silent loadview
 " Show trailing whitespace.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
+
+" Rainbow Parenthesis Plugin.
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Plugin stuff.
 call pathogen#infect()
