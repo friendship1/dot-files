@@ -54,6 +54,11 @@ let g:syntastic_python_checkers=['']
 let g:syntastic_cpp_checkers=['']
 let g:syntastic_javascript_checkers = ['jsxhint']
 
+" Hacky way to disable ale.
+if !has('timer')
+    let g:loaded_ale = 1
+endif
+
 " Ale Syntax Checker
 let &runtimepath.=',~/.vim/bundle/ale'
 let g:ale_lint_on_save = 1
