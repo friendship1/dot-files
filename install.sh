@@ -17,7 +17,7 @@ fun () {
   fi
 }
 
-echo "Installing your brand new vim!"
+echo "Installing your brand new vim."
 echo "Backing up old files..."
 
 fun "$HOME/.vimrc" "f"
@@ -28,9 +28,13 @@ echo "Cloning the required files."
 git clone https://github.com/bradyz/dot-files.git ~/.vim/ > /dev/null 2>&1
 cd ~/.vim/
 
-echo "Installing plugins...(Be patient!)"
+echo "Installing plugins..."
 
 git submodule init > /dev/null 2>&1
 git submodule update > /dev/null 2>&1
+
+echo "Linking ~/.vimrc to the new vimrc."
+cd
+ln -s ~/.vim/vimrc ~/.vimrc
 
 echo "Done."

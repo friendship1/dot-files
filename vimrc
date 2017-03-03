@@ -41,11 +41,13 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 map <Leader>t :NERDTreeToggle <CR>
 
 " Pretty UI.
-let g:airline_powerline_fonts = 1
 let g:airline_theme='lucius'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#whitespace#symbol = ''
 let g:airline#extensions#tabline#enabled = 1
+
+" Comment this out if you don't have fancy fonts.
+" let g:airline_powerline_fonts = 1
 
 " Syntax checker.
 let g:syntastic_python_checkers=['']
@@ -84,7 +86,11 @@ nnoremap <silent> <leader>s :mksession <CR>
 nnoremap <silent> <leader>r :source ~/.vimrc <CR>
 
 " Hotkeys for paste mode.
-nnoremap <silent> <leader>p :set paste <CR>:put *<CR>:set nopaste <CR>
+if has('unix')
+  nnoremap <silent> <leader>p :set paste <CR>:put +<CR>:set nopaste <CR>
+elseif has('mac')
+  nnoremap <silent> <leader>p :set paste <CR>:put *<CR>:set nopaste <CR>
+endif
 
 " Hotkeys for changing tabs.
 nnoremap <leader>s2 :setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab <CR>
