@@ -124,6 +124,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" Disable marks for quickfixsigns.
+let g:quickfixsigns#marks#buffer=[]
+
 " Plugin stuff.
 call pathogen#infect()
 call pathogen#helptags()
