@@ -47,7 +47,7 @@ let g:airline#extensions#whitespace#symbol = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Comment this out if you don't have fancy fonts.
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 " Syntax checker.
 let g:syntastic_python_checkers=['']
@@ -55,12 +55,11 @@ let g:syntastic_cpp_checkers=['']
 let g:syntastic_javascript_checkers = ['jsxhint']
 
 " Hacky way to disable ale.
-if !has('timer')
+if !has('timers')
     let g:loaded_ale = 1
 endif
 
 " Ale Syntax Checker
-let &runtimepath.=',~/.vim/bundle/ale'
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 1
 
@@ -93,7 +92,7 @@ nnoremap <silent> <leader>r :source ~/.vimrc <CR>
 " Hotkeys for paste mode.
 if has('unix')
   nnoremap <silent> <leader>p :set paste <CR>:put +<CR>:set nopaste <CR>
-elseif has('mac')
+else
   nnoremap <silent> <leader>p :set paste <CR>:put *<CR>:set nopaste <CR>
 endif
 
@@ -122,8 +121,8 @@ set undofile
 
 " Persist last cursor position.
 call system('mkdir -p ' . '$HOME/.vim/view')
-autocmd BufWinLeave ?* mkview
-autocmd BufWinEnter ?* silent loadview
+autocmd BufWinLeave ?* silent mkview
+autocmd BufWinEnter ?* silent! loadview
 
 " Show trailing whitespace.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
