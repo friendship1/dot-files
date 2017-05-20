@@ -52,6 +52,3 @@
 [submodule "bundle/quickfixsigns_vim"]
 	path = bundle/quickfixsigns_vim
 	url = git@github.com:tomtom/quickfixsigns_vim.git
-[submodule "bundle/indentLine"]
-	path = bundle/indentLine
-	url = git@github.com:Yggdroot/indentLine.git

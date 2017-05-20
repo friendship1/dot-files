@@ -22,6 +22,8 @@ set smarttab
 set t_Co=256
 set termencoding=utf-8
 set wildignore+=*.so,*.swp,*.zip,*.o
+set nohlsearch
+set noincsearch
 
 syntax on
 filetype plugin indent on
@@ -61,7 +63,10 @@ endif
 
 " Ale Syntax Checker
 let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_linters = {'cpp': ['g++']}
+let g:ale_cpp_gcc_options = '-I/Users/bradyzhou/code/cs395t/seven_ms1/eigen/ -I/usr/local/Cellar/qt5/5.8.0/lib/QtCore.framework/Versions/5/Headers -I/usr/local/Cellar/qt5/5.8.0/lib/QtOpenGL.framework/Versions/5/Headers -std=c++11 -Wall'
+
 
 " Start menu.
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
@@ -85,9 +90,13 @@ nnoremap <silent> 0 :bn! <CR>
 
 " Moving screens
 nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
-nnoremap <silent> <leader>s :mksession <CR>
-nnoremap <silent> <leader>r :source ~/.vimrc <CR>
+
+" Terrible nvim bug.
+if has('nvim')
+    nmap <BS> <C-W>h
+else
+    nnoremap <C-H> <C-W>h
+endif
 
 " Hotkeys for paste mode.
 if has('unix')
