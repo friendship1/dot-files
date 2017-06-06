@@ -1,6 +1,6 @@
 clear
 
-fun () {
+backup () {
   BACKUP=$1
   TYPE=$2
   if [ -$TYPE "$BACKUP" ]; then
@@ -20,8 +20,8 @@ fun () {
 echo "Installing your brand new vim."
 echo "Backing up old files..."
 
-fun "$HOME/.vimrc" "f"
-fun "$HOME/.vim" "d"
+backup "$HOME/.vimrc" "f"
+backup "$HOME/.vim" "d"
 
 echo "Cloning the required files."
 

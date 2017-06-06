@@ -109,6 +109,9 @@ endif
 nnoremap <leader>s2 :setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab <CR>
 nnoremap <leader>s4 :setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab <CR>
 
+" Python debugging.
+nnoremap <leader>d oimport pdb; pdb.set_trace()<CR><ESC>
+
 " who put this here
 imap jj <ESC>
 
