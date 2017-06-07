@@ -2,7 +2,7 @@
 copy the install.sh file and then run it in the terminal with
 
 ```
-sh install.sh
+sh -c "$(wget https://raw.githubusercontent.com/bradyz/dot-files/master/install.sh -O -)"
 ```
 
 your old vim will be backed up and put into ~/.vimrc_your_backup and ~/.vim_your_backup

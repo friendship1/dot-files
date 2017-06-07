@@ -34,7 +34,10 @@ git submodule init > /dev/null 2>&1
 git submodule update > /dev/null 2>&1
 
 echo "Linking ~/.vimrc to the new vimrc."
-cd
 ln -s ~/.vim/vimrc ~/.vimrc
+
+echo "Installing oh-my-zsh."
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+ln -s ~/.vim/.zshrc ~/.zshrc
 
 echo "Done."
