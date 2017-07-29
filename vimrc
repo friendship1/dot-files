@@ -24,6 +24,8 @@ set termencoding=utf-8
 set wildignore+=*.so,*.swp,*.zip,*.o
 set nohlsearch
 set noincsearch
+set fillchars+=vert:\ 
+set clipboard+=unnamed
 
 syntax on
 filetype plugin indent on
@@ -118,6 +120,8 @@ imap jj <ESC>
 " Faster jumps.
 map <C-J> 5j
 map <C-K> 5k
+
+nnoremap <leader>d oimport pdb; pdb.set_trace()<ESC>
 
 " Tabs based on filetype.
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
