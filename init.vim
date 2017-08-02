@@ -1,1 +1,1 @@
-/Users/bradyzhou/.vimrc
+/Users/bz/.vimrc
