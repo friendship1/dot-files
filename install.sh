@@ -41,4 +41,7 @@ ln -s ~/.vim/.zshrc ~/.zshrc
 echo "Linking ~/.tmux.conf."
 ln -s ~/.vim/.tmux.conf ~/.tmux.conf
 
+echo "Linking ~/.pylintrc."
+ln -s ~/.vim/.pylintrc ~/.pylintrc
+
 echo "Done."
