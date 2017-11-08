@@ -50,25 +50,8 @@ let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#whitespace#symbol = ''
 let g:airline#extensions#tabline#enabled = 1
 
-" Comment this out if you don't have fancy fonts.
-let g:airline_powerline_fonts = 1
-
-" Syntax checker.
-let g:syntastic_python_checkers=['']
-let g:syntastic_cpp_checkers=['']
-let g:syntastic_javascript_checkers = ['jsxhint']
-
-" Hacky way to disable ale.
-if !has('timers')
-    let g:loaded_ale = 1
-endif
-
-" Ale Syntax Checker
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_linters = {'cpp': ['g++']}
-let g:ale_cpp_gcc_options = '-I/Users/bradyzhou/code/cs395t/seven_ms1/eigen/ -I/usr/local/Cellar/qt5/5.8.0/lib/QtCore.framework/Versions/5/Headers -I/usr/local/Cellar/qt5/5.8.0/lib/QtOpenGL.framework/Versions/5/Headers -std=c++11 -Wall'
-
+" Uncomment this if you have fancy fonts.
+" let g:airline_powerline_fonts = 1
 
 " Start menu.
 let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
