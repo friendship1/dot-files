@@ -26,6 +26,7 @@ set nohlsearch
 set noincsearch
 set fillchars+=vert:\ 
 set clipboard+=unnamed
+set list
 
 syntax on
 filetype plugin indent on
