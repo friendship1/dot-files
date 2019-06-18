@@ -26,6 +26,7 @@ set nohlsearch
 set noincsearch
 set fillchars+=vert:\ 
 set clipboard+=unnamed
+set listchars=tab:>-
 set list
 
 syntax on
@@ -34,33 +35,6 @@ filetype plugin indent on
 colorscheme atom-dark-256
 
 let mapleader=","
-
-" Fuzzy finder.
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'bin\|build\|CMakeFiles\|node_modules\|DS_Store\|git|\.o'
-let g:ctrlp_working_path_mode = 'c'
-
-" File explorer.
-let g:nerdtree_tabs_open_on_gui_startup=0
-map <Leader>t :NERDTreeToggle <CR>
-
-" Pretty UI.
-let g:airline_theme='lucius'
-let g:airline#extensions#whitespace#show_message = 0
-let g:airline#extensions#whitespace#symbol = ''
-let g:airline#extensions#tabline#enabled = 1
-
-" Uncomment this if you have fancy fonts.
-" let g:airline_powerline_fonts = 1
-
-" Start menu.
-let g:startify_custom_header = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
-
-" Display marks.
-let g:easytags_file = '~/.vim/tags'
-let g:easytags_syntax_keyword = 'always'
-let g:easytags_auto_highlight = 0
 
 " Indent blocks.
 vnoremap < <gv
@@ -76,42 +50,43 @@ nnoremap <silent> 0 :bn! <CR>
 
 " Moving screens
 nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
-" Terrible nvim bug.
-if has('nvim')
-    nmap <BS> <C-W>h
-else
-    nnoremap <C-H> <C-W>h
-endif
+" Plugin stuff.
+call plug#begin('~/.vim/plugged')
 
-" Hotkeys for paste mode.
-if has('unix')
-  nnoremap <silent> <leader>p :set paste <CR>:put +<CR>:set nopaste <CR>
-else
-  nnoremap <silent> <leader>p :set paste <CR>:put *<CR>:set nopaste <CR>
-endif
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-" Hotkeys for changing tabs.
-nnoremap <leader>s2 :setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab <CR>
-nnoremap <leader>s4 :setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab <CR>
+Plug 'scrooloose/nerdcommenter'
+Plug 'luochen1990/rainbow'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-surround'
+Plug 'tomtom/quickfixsigns_vim'
+Plug 'kshenoy/vim-signature'
+Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
+
+" Fuzzy finder.
+let g:ctrlp_working_path_mode = 'c'
+
+" Pretty UI.
+let g:airline_theme='lucius'
+let g:airline#extensions#whitespace#show_message = 0
+let g:airline#extensions#whitespace#symbol = ''
+let g:airline#extensions#tabline#enabled = 1
 
 " Python debugging.
 nnoremap <leader>d oimport pdb; pdb.set_trace()<CR><ESC>
-
-" who put this here
-imap jj <ESC>
 
 " Faster jumps.
 map <C-J> 5j
 map <C-K> 5k
 
-nnoremap <leader>d oimport pdb; pdb.set_trace()<ESC>
-
 " Tabs based on filetype.
-autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 " Persist undo.
@@ -128,15 +103,17 @@ autocmd BufWinEnter ?* silent! loadview
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 match ExtraWhitespace /\s\+$/
 
-" Rainbow Parenthesis Plugin.
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " Disable marks for quickfixsigns.
 let g:quickfixsigns#marks#buffer=[]
+let g:rainbow_active = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:pymode_rope = 0
+let g:ale_linters = { 'python': ['flake8'] }
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = "<C-j>"
 
-" Plugin stuff.
-call pathogen#infect()
-call pathogen#helptags()
+" End plugin stuff.
+call plug#end()
