@@ -52,22 +52,28 @@ nnoremap <silent> 0 :bn! <CR>
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
+inoremap <expr> <TAB> pumvisible() ? "<Down>" : "<TAB>"
+inoremap <expr> <C-j> pumvisible() ? "<Down>" : "<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "<Up>" : "<C-k>"
+inoremap <expr> <CR> pumvisible() ? "<CR>" : "<CR>"
+
 " Plugin stuff.
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'powerline/powerline-fonts'
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/quickfixsigns_vim'
 Plug 'kshenoy/vim-signature'
 Plug 'w0rp/ale'
-Plug 'ervandew/supertab'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+let g:deoplete#enable_at_startup = 1
 
 " Fuzzy finder.
 let g:ctrlp_working_path_mode = 'c'
@@ -77,9 +83,10 @@ let g:airline_theme='lucius'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#whitespace#symbol = ''
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Python debugging.
-nnoremap <leader>d oimport pdb; pdb.set_trace()<CR><ESC>
+nnoremap <leader>pd oimport pdb; pdb.set_trace()<CR><ESC>
 
 " Faster jumps.
 map <C-J> 5j
@@ -112,8 +119,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:pymode_rope = 0
 let g:ale_linters = { 'python': ['flake8'] }
-let g:jedi#popup_on_dot = 0
-let g:jedi#completions_command = "<C-j>"
 
 " End plugin stuff.
 call plug#end()
