@@ -28,6 +28,7 @@ set fillchars+=vert:\
 set clipboard+=unnamed
 set listchars=tab:>-
 set list
+set autochdir
 
 syntax on
 filetype plugin indent on
@@ -72,11 +73,13 @@ Plug 'tomtom/quickfixsigns_vim'
 Plug 'kshenoy/vim-signature'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 
 let g:deoplete#enable_at_startup = 1
 
 " Fuzzy finder.
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'r'
 
 " Pretty UI.
 let g:airline_theme='lucius'
@@ -119,6 +122,11 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:pymode_rope = 0
 let g:ale_linters = { 'python': ['flake8'] }
+let g:deoplete#sources#jedi#show_docstring = 1
+
+let g:jedi#completions_enabled = 0
+let g:jedi#use_splits_not_buffers = "right"
+
 
 " End plugin stuff.
 call plug#end()

@@ -23,15 +23,27 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 unset PYTHONPATH
-export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_0.9.6/PythonAPI/carla/dist/carla-0.9.6-py3.5-linux-x86_64.egg
-#export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_0.9.6/PythonAPI/carla
-export PYTHONPATH=$PYTHONPATH:$HOME/code/carla_project/
-export PYTHONPATH=$PYTHONPATH:$HOME/code/carla_project/PythonAPI
-export PYTHONPATH=$PYTHONPATH:$HOME/code/scenario_runner-0.9.6
 
-export CARLA_ROOT=/home/bradyzhou/software/CARLA_0.9.6
-export CARLA_SERVER=/home/bradyzhou/software/CARLA_0.9.6/CarlaUE4.sh
-export ROOT_SCENARIO_RUNNER=/home/bradyzhou/code/scenario_runner-0.9.6
+#export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_0.9.8/PythonAPI/carla
+#export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_0.9.8/PythonAPI/carla/dist/carla-0.9.8-py3.5-linux-x86_64.egg
+#export CARLA_ROOT=/home/bradyzhou/software/CARLA_0.9.8
+#export CARLA_SERVER=/home/bradyzhou/software/CARLA_0.9.8/CarlaUE4.sh
+
+#export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_latest/PythonAPI/carla
+#export PYTHONPATH=$PYTHONPATH:$HOME/software/CARLA_latest/PythonAPI/carla/dist/carla-0.9.8-py3.7-linux-x86_64.egg
+#export CARLA_ROOT=/home/bradyzhou/software/CARLA_latest
+#export CARLA_SERVER=/home/bradyzhou/software/CARLA_latest/CarlaUE4.sh
+
+#export ROOT_SCENARIO_RUNNER=/home/bradyzhou/code/scenario_runner_fresh
+#export LEADERBOARD_ROOT=/home/bradyzhou/code/leaderboard
+
+export CARLA_ROOT=/home/bradyzhou/software/CARLA_0.9.8
+export SCENARIO_RUNNER_ROOT=/home/bradyzhou/code/2020_CARLA_challenge/scenario_runner
+export LEADERBOARD_ROOT=/home/bradyzhou/code/2020_CARLA_challenge/leaderboard
+
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco200/bin
+export WANDB_DIR=$HOME
+export DISPLAY=:0
 
 plugins=(git)
 symbol="🐙  "
@@ -39,3 +51,8 @@ symbol="🐙  "
 source $ZSH/oh-my-zsh.sh
 
 alias gs="git status"
+
+display_brightness() {
+    xrandr --output DP-0 --brightness $1
+    xrandr --output HDMI-0 --brightness $2
+}
