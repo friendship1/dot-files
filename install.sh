@@ -1,16 +1,17 @@
 sudo apt update
 
 # install prerequisites
+sudo apt-get install make git wget tar -y
 sudo apt-get install gcc cmake -y
 sudo apt-get install pkg-config libtool libtool-bin gettext -y
 sudo apt-get install fuse libfuse2 git python3-pip ack-grep -y
 
 # >>> Install neovim 0.6.0 >>>
 # sudo apt install neovim -y
-wget https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage --output-document nvim
-chmod +x nvim
-sudo chown root:root nvim
-sudo mv nvim /usr/bin
+wget https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage
+chmod +x nvim.appimage
+sudo chown root:root nvim.appimage
+sudo mv nvim.appimage /usr/bin/nvim
 mkdir -p ~/.config/nvim
 
 #git clone https://github.com/neovim/neovim neovim-src
