@@ -6,6 +6,7 @@ sudo apt-get install gcc cmake -y
 sudo apt-get install pkg-config libtool libtool-bin gettext -y
 sudo apt-get install fuse libfuse2 git python3-pip ack-grep -y
 
+cd install
 # >>> Install neovim 0.6.0 >>>
 # sudo apt install neovim -y
 wget https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage
@@ -42,6 +43,9 @@ sudo apt install xclip -y
 sudo apt install stow -y
 sudo apt install fonts-powerline
 
+rm -r ~/.oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+cd ..
