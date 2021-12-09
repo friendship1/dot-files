@@ -58,3 +58,5 @@ fi
 rm -r ~/.vim
 
 cd ..
+
+sudo apt install clang

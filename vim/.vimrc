@@ -22,8 +22,8 @@ set smarttab
 set t_Co=256
 set termencoding=utf-8
 set wildignore+=*.so,*.swp,*.zip,*.o
-set nohlsearch
-set noincsearch
+set hlsearch
+set incsearch
 set fillchars+=vert:\ 
 set clipboard+=unnamed
 set listchars=tab:>-
@@ -34,6 +34,7 @@ syntax on
 filetype plugin indent on
 
 colorscheme atom-dark-256
+hi cursorline ctermfg=none ctermbg=23 guifg=fg guibg=#293739
 
 let mapleader=","
 

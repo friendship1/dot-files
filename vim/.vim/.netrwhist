@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/bradyzhou/corl2017'
-let g:netrw_dirhist_2='/home/bradyzhou/code/carla_project/PythonAPI/agents/lbc'
-let g:netrw_dirhist_3='/home/bradyzhou/.config/nvim'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/jwwoo/dot-files2/install'
+let g:netrw_dirhist_1='/home/jwwoo/dot-files2/vim/.vim'
