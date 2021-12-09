@@ -9,6 +9,7 @@ sudo apt-get install fuse libfuse2 git python3-pip ack-grep -y
 cd install
 # >>> Install neovim 0.6.0 >>>
 # sudo apt install neovim -y
+echo "###### installing neovim...######"
 wget https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage
 chmod +x nvim.appimage
 sudo chown root:root nvim.appimage
@@ -26,6 +27,7 @@ mkdir -p ~/.config/nvim
 
 # >>> Install tmux <<<
 # sudo apt install tmux -y
+echo "####### installing tmux...#######"
 sudo apt-get install autoconf automake pkg-config libevent-dev libncurses5-dev -y
 # git clone https://github.com/tmux/tmux.git tmux-src
 # git checkout 3.2a
@@ -37,15 +39,22 @@ sudo make install
 cd ..
 # <<< Install tmux <<<
 
+echo "####### installing zsh...#######"
 sudo apt install zsh -y
 
 sudo apt install xclip -y
 sudo apt install stow -y
-sudo apt install fonts-powerline
+sudo apt install fonts-powerline -y
 
 rm -r ~/.oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+rm ~/.zshrc
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ -d "~/.tmux/plugins/tpm" ]; then
+  # Take action if $DIR exists. #
+  echo "git clone tpm..."
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+rm -r ~/.vim
 
 cd ..
