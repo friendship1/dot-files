@@ -2,4 +2,6 @@
 vim/.vim/plugged/*
 vim/.vim/undodir/*
 vim/.vim/view/*
+vim/.vim/.netrwhist
 old-dot-files/*
+

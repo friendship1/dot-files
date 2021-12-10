@@ -24,3 +24,5 @@ display_brightness() {
     xrandr --output DP-0 --brightness $1
     xrandr --output HDMI-0 --brightness $2
 }
+
+alias v=nvim
