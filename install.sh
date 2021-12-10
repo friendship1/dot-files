@@ -15,22 +15,12 @@ chmod +x nvim.appimage
 sudo chown root:root nvim.appimage
 sudo mv nvim.appimage /usr/bin/nvim
 mkdir -p ~/.config/nvim
-
-#git clone https://github.com/neovim/neovim neovim-src
-#cd neovim-src
-#git checkout stable
-#make
-#sudo make install
-#cd ..
-
 # <<< Install neovim 0.6.0 <<<
 
 # >>> Install tmux <<<
 # sudo apt install tmux -y
 echo "####### installing tmux...#######"
 sudo apt-get install autoconf automake pkg-config libevent-dev libncurses5-dev -y
-# git clone https://github.com/tmux/tmux.git tmux-src
-# git checkout 3.2a
 wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
 tar -xvf tmux-3.2a.tar.gz
 cd tmux-3.2a
@@ -39,6 +29,7 @@ sudo make install
 cd ..
 # <<< Install tmux <<<
 
+# >>> Install zsh >>>
 echo "####### installing zsh...#######"
 sudo apt install zsh -y
 
@@ -46,17 +37,17 @@ sudo apt install xclip -y
 sudo apt install stow -y
 sudo apt install fonts-powerline -y
 
-rm -r ~/.oh-my-zsh
+sudo rm -r ~/.oh-my-zsh
+
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-rm ~/.zshrc
+# <<< Install zsh <<<
 
 if [ -d "~/.tmux/plugins/tpm" ]; then
   # Take action if $DIR exists. #
   echo "git clone tpm..."
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
-rm -r ~/.vim
-
 cd ..
 
-sudo apt install clang
+# For Vim plugin
+sudo apt install clang -y
