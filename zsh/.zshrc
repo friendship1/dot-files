@@ -29,3 +29,14 @@ alias v=nvim
 
 export GCM_CREDENTIAL_STORE=cache
 export LANG=en_US.UTF-8
+
+if [[ $(grep WSL2 /proc/version) ]]; then
+  export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+  export LIBGL_ALWAYS_INDIRECT=1
+fi
+
+export PATH=$PATH:~/.local/bin
+
+function pgpu {
+    watch -n1 --color gpustat --color
+}
