@@ -30,11 +30,25 @@ set listchars=tab:>-
 set list
 set autochdir
 
+fu! Cpm()
+    if(&nu)
+        set nonu
+        set norelativenumber
+        set scl=no
+    else
+        set nu
+        set relativenumber
+        set scl=yes
+    endif
+endfunc
+command Cpm call Cpm()
+
 syntax on
 filetype plugin indent on
 
 colorscheme atom-dark-256
 hi cursorline ctermfg=none ctermbg=23 guifg=fg guibg=#293739
+" set guicursor=n-v-c:block-Cursor
 
 let mapleader=","
 
