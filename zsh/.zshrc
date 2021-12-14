@@ -26,3 +26,6 @@ display_brightness() {
 }
 
 alias v=nvim
+
+export GCM_CREDENTIAL_STORE=cache
+export LANG=en_US.UTF-8
