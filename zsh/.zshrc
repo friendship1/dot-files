@@ -11,9 +11,9 @@ HIST_STAMPS="mm/dd/yyyy"
 
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco200/bin
 export WANDB_DIR=$HOME
-export DISPLAY=:0
+# export DISPLAY=:0
 
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 symbol="🐙  "
 
 source $ZSH/oh-my-zsh.sh
