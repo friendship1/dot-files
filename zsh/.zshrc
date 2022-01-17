@@ -13,7 +13,7 @@ HIST_STAMPS="mm/dd/yyyy"
 export WANDB_DIR=$HOME
 # export DISPLAY=:0
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
 symbol="🐙  "
 
 source $ZSH/oh-my-zsh.sh
@@ -25,7 +25,29 @@ display_brightness() {
     xrandr --output HDMI-0 --brightness $2
 }
 
-alias v=nvim
+alias vim=nvim
+alias v=vim
 
 export GCM_CREDENTIAL_STORE=cache
 export LANG=en_US.UTF-8
+
+# export ZSH_TMUX_AUTOSTART=true
+
+setopt nosharehistory
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/cv8/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/cv8/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/cv8/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/cv8/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+#
+export PATH="/usr/local/cuda/bin:$PATH"
