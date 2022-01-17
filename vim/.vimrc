@@ -61,12 +61,13 @@ nnoremap j gj
 nnoremap k gk
 
 " Moving buffers.
-nnoremap <silent> 9 :bp! <CR>
-nnoremap <silent> 0 :bn! <CR>
-
-" Moving screens
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
+if !exists('g:vscode')
+    nnoremap <silent> 9 :bp! <CR>
+    nnoremap <silent> 0 :bn! <CR>
+    " Moving screens
+    nnoremap <C-L> <C-W>l
+    nnoremap <C-H> <C-W>h
+endif
 
 inoremap <expr> <TAB> pumvisible() ? "<Down>" : "<TAB>"
 inoremap <expr> <C-j> pumvisible() ? "<Down>" : "<C-j>"
@@ -76,20 +77,22 @@ inoremap <expr> <CR> pumvisible() ? "<CR>" : "<CR>"
 " Plugin stuff.
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'powerline/powerline-fonts'
-Plug 'scrooloose/nerdcommenter'
-Plug 'luochen1990/rainbow'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tomtom/quickfixsigns_vim'
-Plug 'kshenoy/vim-signature'
-Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
+if !exists('g:vscode')
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'powerline/powerline-fonts'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'luochen1990/rainbow'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'tomtom/quickfixsigns_vim'
+  Plug 'kshenoy/vim-signature'
+  Plug 'w0rp/ale'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'deoplete-plugins/deoplete-jedi'
+  Plug 'davidhalter/jedi-vim'
+endif
 
 let g:deoplete#enable_at_startup = 1
 
@@ -120,6 +123,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 " Persist last cursor position.
+" asdf		asdf
 call system('mkdir -p ' . '$HOME/.vim/view')
 autocmd BufWinLeave ?* silent mkview
 autocmd BufWinEnter ?* silent! loadview
