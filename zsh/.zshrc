@@ -5,7 +5,7 @@ ZSH_THEME="oxide"
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="yyyy/mm/dd"
+HIST_STAMPS="%Y/%m/%d %H:%M:%S"
 
 # unset PYTHONPATH
 
@@ -28,7 +28,7 @@ display_brightness() {
 alias vim=nvim
 alias v=vim
 
-export GCM_CREDENTIAL_STORE=cache
+# export GCM_CREDENTIAL_STORE=cache
 export LANG=en_US.UTF-8
 
 # export ZSH_TMUX_AUTOSTART=true
@@ -58,7 +58,3 @@ if [[ $(grep WSL2 /proc/version) ]]; then
 fi
 
 export PATH=$PATH:~/.local/bin
-
-function pgpu {
-    watch -n1 --color gpustat --color
-}

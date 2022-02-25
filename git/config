@@ -5,6 +5,7 @@
 [core]
     editor = nvim
 [credential]
-    helper = /usr/local/share/gcm-core/git-credential-manager-core
+    # helper = /usr/local/share/gcm-core/git-credential-manager-core
+	helper = store
 [credential "https://dev.azure.com"]
     useHttpPath = true
