@@ -8,7 +8,7 @@ mv_old() {
 	echo "moving old $1"
 	if [ -f ~/$1 ] || [ -d ~/$1 ]
 	then
-		sudo rm -r old-dot-files/$1.$date
+		# sudo rm -r old-dot-files/$1.$date
 		mv ~/$1 old-dot-files/$1.$date
 	fi
 }
