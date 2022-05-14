@@ -13,3 +13,6 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ZSH_CUSTOM=~/.oh-my-zsh/custom
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/wting/autojump $ZSH_CUSTOM/plugins/autojump
+
+$ZSH_CUSTOM/plugins/autojump/install.py
