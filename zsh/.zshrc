@@ -13,7 +13,7 @@ HIST_STAMPS="%Y/%m/%d %H:%M:%S"
 export WANDB_DIR=$HOME
 # export DISPLAY=:0
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux autojump)
 symbol="🐙  "
 
 source $ZSH/oh-my-zsh.sh
@@ -37,14 +37,14 @@ setopt nosharehistory
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/cv8/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/jw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/cv8/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/cv8/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/jw/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jw/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/cv8/anaconda3/bin:$PATH"
+        export PATH="/home/jw/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
