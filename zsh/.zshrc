@@ -13,7 +13,7 @@ HIST_STAMPS="%Y/%m/%d %H:%M:%S"
 export WANDB_DIR=$HOME
 # export DISPLAY=:0
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux autojump)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
 symbol="🐙  "
 
 source $ZSH/oh-my-zsh.sh
@@ -35,16 +35,20 @@ export LANG=en_US.UTF-8
 
 setopt nosharehistory
 
+[[ -s /home/jwo/.autojump/etc/profile.d/autojump.sh ]] && source /home/jwo/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/jwo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jw/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jw/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/jwo/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jwo/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jw/anaconda3/bin:$PATH"
+        export PATH="/home/jwo/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

@@ -1,5 +1,5 @@
 .PHONY: all
-all: pre nvim tmux zsh gcm backup stow
+all: pre nvim tmux zsh backup stow
 
 .PHONY: install
 install:
@@ -9,13 +9,13 @@ install:
 stow:
 	@stow -t ~ tmux zsh vim
 	@stow -t ~/.config/nvim nvim
-	@stow -t ~/.config/git git
+#	@stow -t ~/.config/git git
 
 .PHONY: unstow
 unstow:
 	@stow -D -t ~ tmux zsh vim
 	@stow -D -t ~/.config/nvim nvim
-	@stow -D -t ~/.config/git git
+#	@stow -D -t ~/.config/git git
 
 .PHONY: backup
 backup:
