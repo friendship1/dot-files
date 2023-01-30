@@ -9,7 +9,6 @@ HIST_STAMPS="%Y/%m/%d %H:%M:%S"
 
 # unset PYTHONPATH
 
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco200/bin
 export WANDB_DIR=$HOME
 # export DISPLAY=:0
 
@@ -34,6 +33,7 @@ export LANG=en_US.UTF-8
 # export ZSH_TMUX_AUTOSTART=true
 
 setopt nosharehistory
+setopt INC_APPEND_HISTORY_TIME
 
 [[ -s /home/jwo/.autojump/etc/profile.d/autojump.sh ]] && source /home/jwo/.autojump/etc/profile.d/autojump.sh
 
@@ -43,14 +43,14 @@ autoload -U compinit && compinit -u
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jwo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/jw/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jwo/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jwo/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/jw/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jw/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jwo/anaconda3/bin:$PATH"
+        export PATH="/home/jw/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -65,3 +65,8 @@ if [[ $(grep WSL2 /proc/version) ]]; then
 fi
 
 export PATH=$PATH:~/.local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
