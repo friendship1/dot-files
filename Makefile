@@ -1,5 +1,5 @@
 .PHONY: all
-all: pre nvim tmux zsh backup stow
+all: pre nvim tmux zsh fzf backup stow
 
 .PHONY: install
 install:
@@ -40,3 +40,7 @@ zsh:
 .PHONY: pre
 pre:
 	sh install-pre.sh
+
+.PHONY: fzf
+fzf:
+	sh install-fzf.sh
