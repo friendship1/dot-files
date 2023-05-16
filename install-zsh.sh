@@ -1,9 +1,8 @@
 # >>> Install zsh >>>
 echo "####### installing zsh...#######"
 sudo apt install zsh -y
+# sudo apt install xclip -y
 
-sudo apt install xclip -y
-sudo apt install stow -y
 sudo apt install fonts-powerline -y
 
 sudo rm -r ~/.oh-my-zsh
@@ -16,4 +15,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugi
 # git clone https://github.com/wting/autojump $ZSH_CUSTOM/plugins/autojump
 
 # $ZSH_CUSTOM/plugins/autojump/install.py
-sudo apt install autojump
+# sudo apt install autojump
