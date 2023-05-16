@@ -7,7 +7,7 @@ sudo apt install gcc cmake -y
 sudo apt install util-linux -y
 sudo apt install tig -y
 sudo apt install stow -y
-sudo apt install htop -y
+sudo apt install htop iftop -y
 sudo apt install ibus-hangul -y
 
 sudo apt install vim -y

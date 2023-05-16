@@ -15,7 +15,7 @@ flatpak install flathub com.ticktick.TickTick -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.usebottles.bottles -y
 flatpak install flathub com.usebottles.bottles -y
-flatpak install flathub com.dropbox.Client -y
+# flatpak install flathub com.dropbox.Client -y
 
 sudo systemctl stop var-snap-firefox-common-host\\x2dhunspell.mount || echo "No firefox systemctl 1"
 sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount || echo "No firefox systemctl 2"
