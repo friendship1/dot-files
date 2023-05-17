@@ -55,10 +55,12 @@ make pre1 pre2
 - setting autostart app
   - geary `geary`
   - ticktick `flatpak run com.ticktick.TickTick`
-  - startup imwheel `imwheel -b "4 5"`
+  - ~~startup imwheel `imwheel -b "4 5"`~~ (it has bug on 23.04, when scroll vertically with shift)
 - YouTubeMusic PWA
 - install zim [url](https://launchpad.net/~jaap.karssenberg/+archive/ubuntu/zim) [url2](https://zim-wiki.org/downloads.html)
   - `sudo add-apt-repository 'deb http://ppa.launchpadcontent.net/jaap.karssenberg/zim/ubuntu kinetic main'` (because there is no 23.04 support right now...)
-- install gnome-extension [clipboard-history](https://extensions.gnome.org/extension/4839/clipboard-history/)
+- install gnome-extension
+  - [clipboard-history](https://extensions.gnome.org/extension/4839/clipboard-history/)
+  - [alttab-scroll-workround](https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/?c=145434)
 - change sshd port [after 22.10](https://askubuntu.com/questions/1439461/ssh-default-port-not-changing-ubuntu-22-10)
 - install mathpix appimage [link](https://mathpix.com/docs/snip/linux-overview) (keep file position)
