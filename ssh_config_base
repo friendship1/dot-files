@@ -1,0 +1,65 @@
+Host github.com
+    User git
+    Hostname github.com
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+Host s1d
+    User jw
+    Hostname 10.150.20.234
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+    ForwardX11 yes
+
+Host s1_vultr
+    User jw
+    Hostname 10.49.0.7
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+    ForwardX11 yes
+
+Host s1
+    User jw
+    Hostname 10.49.0.10
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+    ForwardX11 yes
+
+Host cv11d
+    User cv11
+    Hostname 10.150.20.236
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+
+Host cv11_vultr
+    User cv11
+    ProxyCommand ssh -q lwgdemo_vultr nc 10.150.20.229. 2222
+
+Host cv11
+    User cv11
+    ProxyCommand ssh -q s1 nc 10.150.20.229 2222
+
+Host lwgdemo_vultr
+    User demo
+    HostName 10.49.0.6
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+
+Host labd
+    User jw
+    Hostname 10.150.4.162
+    Port 2222
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+    ForwardX11 yes
+
+Host pid
+    Hostname 172.30.1.50
+    Hostname pi
+    Port 22
