@@ -4,7 +4,6 @@ sudo apt install zsh -y
 # sudo apt install xclip -y
 
 sudo apt install fonts-powerline -y
-
 sudo rm -r ~/.oh-my-zsh
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"

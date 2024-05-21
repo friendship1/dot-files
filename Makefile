@@ -1,5 +1,5 @@
 .PHONY: all
-all: server edge vscode vnc insync flatpak pre2
+all: server vscode vnc insync flatpak pre2
 
 .PHONY: server
 server: pre1 tmux zsh backup stow

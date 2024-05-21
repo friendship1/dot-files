@@ -29,8 +29,9 @@ make pre1 pre2
   - tweaks change R_alt / R_ctrl to hangul / hanja
   - display second on tweaks
   - change mouse acceleration setting to adaptive
-- teams PWA (start with login / turn on notification)
-- vmware install [vmware17.0 url](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/17_0)
+- ~~teams PWA (start with login / turn on notification)~~ (my installation include ms teams as flatpak now)
+- ~~vmware install [vmware17.0 url](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/17_0)~~
+- vmware acquired by braodcom... [vmware workstation pro 17.5.2 url](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/linux/core/) (might be blocked)
   - Download Windows ISO [link](https://www.microsoft.com/software-download/windows11) (to many downloads could be banned)
     - 8Core 8GB
   - login as windows account
