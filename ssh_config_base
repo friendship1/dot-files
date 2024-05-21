@@ -2,7 +2,7 @@ Host github.com
     User git
     Hostname github.com
     Port 22
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
 
 Host s1d
