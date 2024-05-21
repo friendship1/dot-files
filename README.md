@@ -47,6 +47,9 @@ make pre1 pre2
   - login and sync
   - search engine setting
   - vertical tab
+- or firefox
+  - TST, vimium
+  - [hide tab](https://superuser.com/questions/1424478/can-i-hide-native-tabs-at-the-top-of-firefox)
 - geary login and sync (only google account) 
   - if cannot login at 23.04 use `WEBKIT_DISABLE_COMPOSITING_MODE=1 gnome-control-center` [link](https://askubuntu.com/questions/1222378/cant-login-into-google-in-online-accounts-section/1467164#1467164?newreg=f006ccf8ba884133af4f3e695aca378f)
 - zotero login and sync 
