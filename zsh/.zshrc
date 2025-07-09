@@ -22,8 +22,6 @@ source $ZSH/oh-my-zsh.sh
 
 # alias 
 alias gs="git status"
-alias vim=nvim
-alias v=vim
 
 # export GCM_CREDENTIAL_STORE=cache
 export LANG=en_US.UTF-8
@@ -48,4 +46,3 @@ fi
 export PATH=$PATH:~/.local/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
-eval "$(zoxide init zsh)"

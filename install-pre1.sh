@@ -8,10 +8,8 @@ sudo apt install util-linux -y
 sudo apt install tig -y
 sudo apt install stow -y
 sudo apt install htop iftop -y
-sudo apt install ibus-hangul -y
 
 sudo apt install vim -y
-sudo apt install neovim -y
 sudo apt install zoxide -y
 sudo apt install fzf ripgrep -y
 sudo apt install wireguard -y
