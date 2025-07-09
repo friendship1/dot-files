@@ -1,6 +1,6 @@
 [user]
-    name = Jungwan Woo
-    email = friendship1@dgist.ac.kr
+	name = Jungwan Woo
+	email = friendship1@dgist.ac.kr
     username = friendship1
 [core]
     editor = nvim
