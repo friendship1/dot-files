@@ -5,3 +5,4 @@ vim/.vim/view/*
 vim/.vim/.netrwhist
 old-dot-files/*
 
+zsh/.zshrc.local

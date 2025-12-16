@@ -1,10 +1,28 @@
 # >>> Install zsh >>>
 echo "####### installing zsh...#######"
-sudo apt install zsh -y
-# sudo apt install xclip -y
 
-sudo apt install fonts-powerline -y
-sudo rm -r ~/.oh-my-zsh
+############################
+# sudo 가능 여부 체크
+############################
+if command -v sudo >/dev/null 2>&1 && sudo -n true 2>/dev/null; then
+    SUDO="sudo"
+else
+    SUDO=""
+    echo "[INFO] sudo not available → system package install skipped"
+fi
+
+############################
+# 시스템 패키지 (sudo 있을 때만 실행)
+############################
+if [ -n "$SUDO" ] && command -v apt >/dev/null 2>&1; then
+    $SUDO apt update
+    $SUDO apt install -y zsh fonts-powerline
+    # $SUDO apt install -y xclip
+else
+    echo "[SKIP] apt install"
+fi
+
+rm -rf ~/.oh-my-zsh
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 # <<< Install zsh <<<
